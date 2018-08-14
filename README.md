@@ -3,7 +3,7 @@ NGINX Proxy & LetsEncrypt
 This simple compose file is just an example of how you could put some of
 great stuff people have made to some use.
 
-Please not I have NOT made any of this, I have just created the compose
+Please note I have *NOT* made any of this, I have just created the compose
 file.
 
 The compose-file starts up a couple of containers, and interact with 
