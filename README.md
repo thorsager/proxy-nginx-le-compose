@@ -1,7 +1,7 @@
 NGINX Proxy & LetsEncrypt
 =========================
 This simple compose file is just an example of how you could put some of
-greate stuf people have made to some use.
+great stuff people have made to some use.
 
 Please not I have NOT made any of this, I have just created the compose
 file.
@@ -9,12 +9,12 @@ file.
 The compose-file starts up a couple of containers, and interact with 
 docker itself, to create automated revers-proxy for any docker container
 that wants it, and if so wanted creates a TLS cert and smack that in the
-hat aswel.
+hat as well.
 
-Startig out
------------
+Starting out
+------------
 Create a network which will allow you proxy to communicate with all your
-other containers that ned proxying. (the below name `proxy-net` is what is
+other containers that need proxying. (the below name `proxy-net` is what is
 used in the `docker-compose.yml`, you could choose your own!)
 ```
 $ docker network create proxy-net
@@ -23,9 +23,9 @@ When this has been created, your start up the stack.
 ```
 $ docker-compose up -d
 ```
-You are now ready to create you container that neets proxying..
+You are now ready to create you container that needs proxying..
 
-###Using a compose file:
+### Using a compose file:
 ```
 version: '2'
 
@@ -43,7 +43,7 @@ services:
       - VIRTUAL_HOST=whoami.mydomain.tld
       - LETSENCRYPT_HOST=whoami.domain.tld
 ```
-###Or simpy running it:
+### Or simply running it:
 ```
 docker run -it --network proxy-net \
  -e VIRTUAL_HOST=w.mydomain.tld \
